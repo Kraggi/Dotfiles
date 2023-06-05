@@ -27,4 +27,7 @@ ln -s ~/Dotfiles/i3 ~/.config/i3
 
 Polybar
 ln -s ~/Dotfiles/polybar ~/.config/polybar
+
+Alacritty
+ln -s ~/Dotfiles/alacritty ~/.config/alacritty
 ```
