@@ -2,10 +2,10 @@ set visualbell
 set noerrorbells
 set number
 set relativenumber
-scrolloff = 8
+set scrolloff=10
 """ Editing and Reloading the Config
-set clipboard+=unnamed
 set clipboard+=ideaput
+set clipboard+=unnamedplus
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 """ The Escape button
@@ -30,7 +30,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <s-TAB> :action PreviousTab<CR>
 nnoremap <TAB> :action NextTab<CR>
-nnoremap <Leader>en :action EditSourceInNewWindow<CR>
 nnoremap <Leader>n :action NextWindow<CR>
 nnoremap <Leader>q :action CloseContent<CR>
 nnoremap <Leader>qa :action CloseAllEditors<CR>
@@ -57,9 +56,7 @@ nnoremap gE :action GotoPreviousError<CR>
 nnoremap <leader>s :write<CR>
 """ Searching and Source Code Navigation
 set incsearch
-nnoremap <c-/> :action FindInPath<CR>
 nnoremap <c-a> :action GotoAction<CR>
-nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
@@ -103,3 +100,7 @@ vnoremap <A-C-k> :m '<-2<CR>gv=gv
 
 """ Paste without register update
 xnoremap <leader>p "_dP
+
+nnoremap <leader>fw :action FindInPath<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>e :action ShowErrorDescription<CR>
