@@ -103,4 +103,4 @@ xnoremap <leader>p "_dP
 
 nnoremap <leader>fw :action FindInPath<CR>
 nnoremap <leader>ff :action GotoFile<CR>
-nnoremap <leader>e :action ShowErrorDescription<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
