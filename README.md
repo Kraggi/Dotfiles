@@ -21,17 +21,16 @@ ln -s ~/Projects/Dotfiles ~/Dotfiles
 ```bash
 ln -s ~/Dotfiles/nvim ~/.config/nvim
 ln -s ~/Dotfiles/i3 ~/.config/i3
-ln -s ~/Dotfiles/polybar ~/.config/polybar
 ln -s ~/Dotfiles/alacritty ~/.config/alacritty
 ```
 
 #### Install Initial Programs and delete default folders to linking
 ```bash
 sudo pacman -Syu
-sudo pacman -S alacritty polybar neovim 
+sudo pacman -S alacritty neovim flameshot
+sudo yay -S xkblayout-state-git
 
 rm -fr ~/.config/i3
-rm -fr ~/.config/polybar
 rm -fr ~/.config/rofi
 rm -fr ~/.config/alacritty
 rm ~/.Xresources 
@@ -56,7 +55,7 @@ yay -Sy lib32-libstdc++5
 sudo ~/Dotfiles/snx/snx_install.sh
 echo 'MY_VPN_USERNAME=' >> ~/.bashrc
 echo 'MY_VPN_SERVER=' >> ~/.bashrc
-echo "alias vpn='snx -s $MY_VPN_SERVER -u $MY_VPN_USERNAME'"
+echo "alias vpn='snx -s $MY_VPN_SERVER -u $MY_VPN_USERNAME'" >> ~/.bashrc
 ```
 
 #### Install Font
@@ -83,8 +82,15 @@ yay -S vmware-horizon-client
 #### Install Tools for Web Development
 ```bash
 sudo pacman -S nodejs npm lazygit
-sudo npm install yarn eslint typescript typescript-language-server
+sudo npm install -g yarn eslint typescript typescript-language-server
 ```
+
+#### Electric Guitar setup
+https://nayak.io/posts/guitar-to-linux/
+
+#### Zsh setup
+https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
+
 #### Create Links
 ```bash
 ln -s ~/Dotfiles/.ideavimrc ~/.ideavimrc
@@ -92,6 +98,5 @@ ln -s ~/Dotfiles/.Xresources ~/.Xresources
 ln -s ~/Dotfiles/i3 ~/.config/i3
 ln -s ~/Dotfiles/alacritty ~/.config/alacritty
 ln -s ~/Dotfiles/nvim ~/.config/nvim
-ln -s ~/Dotfiles/polybar ~/.config/polybar
 ln -s ~/Dotfiles/rofi ~/.config/rofi
 ```

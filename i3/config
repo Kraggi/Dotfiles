@@ -22,7 +22,6 @@ new_window pixel 1
 
 # Set inner/outer gaps
 gaps inner 6
-gaps outer 3
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -335,9 +334,6 @@ exec_always --no-startup-id xrandr --output HDMI-0 --mode 3840x2160 --rate 120 -
 # Set languages
 exec_always --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle
 
-# Set Polybar
-exec_always ~/.config/polybar/launch.sh &
-
 # Set background
 exec_always feh --bg-fill ~/Pictures/background.jpg
 
@@ -370,3 +366,7 @@ mode "resize" {
 }
 
 bindcode $mod+27 mode "resize"
+
+bar {
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+}
